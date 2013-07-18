@@ -4,7 +4,6 @@
 #installing basic tool
 sudo apt-get install -y curl vim
 
-
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git-core
@@ -23,25 +22,28 @@ npm install -g jshint
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
 
-# Install emacs24
-# https://launchpad.net/~cassou/+archive/emacs
-sudo apt-add-repository -y ppa:cassou/emacs
-sudo apt-get update
-sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
     mv dotfiles dotfiles.old
 fi
-if [ -d .emacs.d/ ]; then
-    mv .emacs.d .emacs.d~
-fi
 git clone https://github.com/danggrianto/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
 ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.vim .
+
+#sublime text connector
+sudo wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
+sudo chmod +x /usr/local/bin/rsub
+
+#git setup and aliases
+git config --global user.name "daniel anggrianto"
+git config --global user.email "d.anggrianto@gmail.com"
+git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.com commit
