@@ -47,3 +47,11 @@ git config --global alias.co checkout
 git config --global alias.st status
 git config --global alias.br branch
 git config --global alias.com commit
+
+#installing hamachi
+sudo apt-get install -y lsb-core
+sudo apt-get -f install
+wget https://secure.logmein.com/labs/logmein-hamachi_2.1.0.101-1_amd64.deb
+sudo dpkg -i logmein-hamachi_2.1.0.101-1_amd64.deb
+sudo hamachi login
+sudo hamachi attach daniel_andy_ang@yahoo.com
