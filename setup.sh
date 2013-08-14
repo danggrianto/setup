@@ -38,3 +38,7 @@ wget https://secure.logmein.com/labs/logmein-hamachi_2.1.0.101-1_amd64.deb
 sudo dpkg -i logmein-hamachi_2.1.0.101-1_amd64.deb
 sudo hamachi login
 sudo hamachi attach daniel_andy_ang@yahoo.com
+
+#installing byobu - screen like
+sudo apt-get install byobu
+byobu-enable
