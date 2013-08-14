@@ -4,24 +4,7 @@
 #installing basic tool
 sudo apt-get install -y curl vim
 
-# Install nvm: node-version manager
-# https://github.com/creationix/nvm
 sudo apt-get install -y git-core
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-
-# Load nvm and install latest production node
-source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
-
-# Install jshint to allow checking of JS code within emacs
-# http://jshint.com/
-npm install -g jshint
-
-# Install rlwrap to provide libreadline features with node
-# See: http://nodejs.org/api/repl.html#repl_repl
-sudo apt-get install -y rlwrap
-
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -37,8 +20,8 @@ ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.vim .
 
 #sublime text connector
-sudo wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
-sudo chmod +x /usr/local/bin/rsub
+#sudo wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
+#sudo chmod +x /usr/local/bin/rsub
 
 #git setup and aliases
 git config --global user.name "daniel anggrianto"
