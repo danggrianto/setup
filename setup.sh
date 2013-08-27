@@ -18,6 +18,7 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.vim .
+ln -sb dotfiles/.gemrc .
 
 #sublime text connector
 #sudo wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
